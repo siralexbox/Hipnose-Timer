@@ -229,10 +229,11 @@
     <None Include="Resources\logo hipnose -01.png" />
     <None Include="Resources\logo hipnose -03.png" />
     <None Include="Resources\logo hipnose -05.png" />
+    <None Include="Resources\paypal-donate-button.png" />
+    <None Include="Resources\back hipnose.png" />
     <None Include="Resources\logo hipnose - blue.png" />
     <None Include="Resources\logo hipnose - green.png" />
     <None Include="Resources\logo hipnose - red.png" />
-    <None Include="Resources\paypal-donate-button.png" />
     <Content Include="timer_2.ico" />
     <None Include="Resources\timer.PNG" />
     <Content Include="timer.ico" />

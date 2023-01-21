@@ -65,7 +65,7 @@ Partial Class Form3
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Image = Global.Timer.My.Resources.Resources.logo_hipnose___red
         Me.PictureBox2.Location = New System.Drawing.Point(79, 12)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(653, 124)
@@ -110,7 +110,7 @@ Partial Class Form3
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "It's not affiliated with Hipnose but coded while working there as an AV engineer." &
     "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "I’m an hobbyist coder developing tolls for my self needs and use." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "I share it " &
-    "to anyone that can find it helpful." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+    "to anyone that can find it useful." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'ImageList1
         '
@@ -148,7 +148,7 @@ Partial Class Form3
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImage = Global.Timer.My.Resources.Resources.back_hipnose
         Me.ClientSize = New System.Drawing.Size(825, 479)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
