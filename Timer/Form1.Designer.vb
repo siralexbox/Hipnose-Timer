@@ -32,12 +32,6 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.ButtonHourUp = New System.Windows.Forms.Button()
-        Me.ButtonMinUp = New System.Windows.Forms.Button()
-        Me.ButtonSecUp = New System.Windows.Forms.Button()
-        Me.ButtonHourDown = New System.Windows.Forms.Button()
-        Me.ButtonMinDown = New System.Windows.Forms.Button()
-        Me.ButtonSecDown = New System.Windows.Forms.Button()
         Me.LabelHour = New System.Windows.Forms.Label()
         Me.LabelSetTime = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -69,13 +63,9 @@ Partial Class Form1
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel14 = New System.Windows.Forms.Panel()
-        Me.ButtonJog1MinUp = New System.Windows.Forms.Button()
-        Me.ButtonJog5MinUp = New System.Windows.Forms.Button()
-        Me.ButtonJog1MinDown = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ButtonJog5MinDown = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -95,15 +85,25 @@ Partial Class Form1
         Me.ColorDialogBackground = New System.Windows.Forms.ColorDialog()
         Me.ColorDialogCountdown = New System.Windows.Forms.ColorDialog()
         Me.ColorDialogMsg = New System.Windows.Forms.ColorDialog()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.CheckBoxStart = New System.Windows.Forms.CheckBox()
-        Me.ButtonReset = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.FontDialogCountdown = New System.Windows.Forms.FontDialog()
         Me.FontDialogMsg = New System.Windows.Forms.FontDialog()
         Me.ColorDialogClock = New System.Windows.Forms.ColorDialog()
         Me.FontDialogClock = New System.Windows.Forms.FontDialog()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.ButtonJog1MinUp = New System.Windows.Forms.Button()
+        Me.ButtonJog5MinUp = New System.Windows.Forms.Button()
+        Me.ButtonJog1MinDown = New System.Windows.Forms.Button()
+        Me.ButtonJog5MinDown = New System.Windows.Forms.Button()
+        Me.CheckBoxStart = New System.Windows.Forms.CheckBox()
+        Me.ButtonReset = New System.Windows.Forms.Button()
+        Me.ButtonHourUp = New System.Windows.Forms.Button()
+        Me.ButtonMinUp = New System.Windows.Forms.Button()
+        Me.ButtonSecUp = New System.Windows.Forms.Button()
+        Me.ButtonHourDown = New System.Windows.Forms.Button()
+        Me.ButtonMinDown = New System.Windows.Forms.Button()
+        Me.ButtonSecDown = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel9.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -219,90 +219,6 @@ Partial Class Form1
         Me.Label13.Size = New System.Drawing.Size(103, 16)
         Me.Label13.TabIndex = 33
         Me.Label13.Text = "Ctrl + Click to set"
-        '
-        'ButtonHourUp
-        '
-        Me.ButtonHourUp.BackgroundImage = Global.Timer.My.Resources.Resources.up_white
-        Me.ButtonHourUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonHourUp.Cursor = System.Windows.Forms.Cursors.PanNorth
-        Me.ButtonHourUp.FlatAppearance.BorderSize = 0
-        Me.ButtonHourUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonHourUp.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonHourUp.Location = New System.Drawing.Point(86, 21)
-        Me.ButtonHourUp.Name = "ButtonHourUp"
-        Me.ButtonHourUp.Size = New System.Drawing.Size(32, 32)
-        Me.ButtonHourUp.TabIndex = 32
-        Me.ButtonHourUp.UseVisualStyleBackColor = False
-        '
-        'ButtonMinUp
-        '
-        Me.ButtonMinUp.BackgroundImage = Global.Timer.My.Resources.Resources.up_white
-        Me.ButtonMinUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonMinUp.Cursor = System.Windows.Forms.Cursors.PanNorth
-        Me.ButtonMinUp.FlatAppearance.BorderSize = 0
-        Me.ButtonMinUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonMinUp.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonMinUp.Location = New System.Drawing.Point(175, 21)
-        Me.ButtonMinUp.Name = "ButtonMinUp"
-        Me.ButtonMinUp.Size = New System.Drawing.Size(32, 32)
-        Me.ButtonMinUp.TabIndex = 31
-        Me.ButtonMinUp.UseVisualStyleBackColor = False
-        '
-        'ButtonSecUp
-        '
-        Me.ButtonSecUp.BackgroundImage = Global.Timer.My.Resources.Resources.up_white
-        Me.ButtonSecUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonSecUp.Cursor = System.Windows.Forms.Cursors.PanNorth
-        Me.ButtonSecUp.FlatAppearance.BorderSize = 0
-        Me.ButtonSecUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonSecUp.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonSecUp.Location = New System.Drawing.Point(267, 21)
-        Me.ButtonSecUp.Name = "ButtonSecUp"
-        Me.ButtonSecUp.Size = New System.Drawing.Size(32, 32)
-        Me.ButtonSecUp.TabIndex = 30
-        Me.ButtonSecUp.UseVisualStyleBackColor = False
-        '
-        'ButtonHourDown
-        '
-        Me.ButtonHourDown.BackgroundImage = Global.Timer.My.Resources.Resources.down_white
-        Me.ButtonHourDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonHourDown.Cursor = System.Windows.Forms.Cursors.PanSouth
-        Me.ButtonHourDown.FlatAppearance.BorderSize = 0
-        Me.ButtonHourDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonHourDown.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonHourDown.Location = New System.Drawing.Point(85, 105)
-        Me.ButtonHourDown.Name = "ButtonHourDown"
-        Me.ButtonHourDown.Size = New System.Drawing.Size(32, 32)
-        Me.ButtonHourDown.TabIndex = 29
-        Me.ButtonHourDown.UseVisualStyleBackColor = False
-        '
-        'ButtonMinDown
-        '
-        Me.ButtonMinDown.BackgroundImage = Global.Timer.My.Resources.Resources.down_white
-        Me.ButtonMinDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonMinDown.Cursor = System.Windows.Forms.Cursors.PanSouth
-        Me.ButtonMinDown.FlatAppearance.BorderSize = 0
-        Me.ButtonMinDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonMinDown.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonMinDown.Location = New System.Drawing.Point(175, 105)
-        Me.ButtonMinDown.Name = "ButtonMinDown"
-        Me.ButtonMinDown.Size = New System.Drawing.Size(32, 32)
-        Me.ButtonMinDown.TabIndex = 27
-        Me.ButtonMinDown.UseVisualStyleBackColor = False
-        '
-        'ButtonSecDown
-        '
-        Me.ButtonSecDown.BackgroundImage = Global.Timer.My.Resources.Resources.down_white
-        Me.ButtonSecDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonSecDown.Cursor = System.Windows.Forms.Cursors.PanSouth
-        Me.ButtonSecDown.FlatAppearance.BorderSize = 0
-        Me.ButtonSecDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonSecDown.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonSecDown.Location = New System.Drawing.Point(269, 105)
-        Me.ButtonSecDown.Name = "ButtonSecDown"
-        Me.ButtonSecDown.Size = New System.Drawing.Size(32, 32)
-        Me.ButtonSecDown.TabIndex = 19
-        Me.ButtonSecDown.UseVisualStyleBackColor = False
         '
         'LabelHour
         '
@@ -676,48 +592,6 @@ Partial Class Form1
         Me.Panel14.Size = New System.Drawing.Size(364, 87)
         Me.Panel14.TabIndex = 21
         '
-        'ButtonJog1MinUp
-        '
-        Me.ButtonJog1MinUp.BackgroundImage = Global.Timer.My.Resources.Resources.up_white
-        Me.ButtonJog1MinUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonJog1MinUp.Cursor = System.Windows.Forms.Cursors.PanNorth
-        Me.ButtonJog1MinUp.FlatAppearance.BorderSize = 0
-        Me.ButtonJog1MinUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonJog1MinUp.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonJog1MinUp.Location = New System.Drawing.Point(269, 14)
-        Me.ButtonJog1MinUp.Name = "ButtonJog1MinUp"
-        Me.ButtonJog1MinUp.Size = New System.Drawing.Size(32, 32)
-        Me.ButtonJog1MinUp.TabIndex = 36
-        Me.ButtonJog1MinUp.UseVisualStyleBackColor = False
-        '
-        'ButtonJog5MinUp
-        '
-        Me.ButtonJog5MinUp.BackgroundImage = Global.Timer.My.Resources.Resources.up_white
-        Me.ButtonJog5MinUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonJog5MinUp.Cursor = System.Windows.Forms.Cursors.PanNorth
-        Me.ButtonJog5MinUp.FlatAppearance.BorderSize = 0
-        Me.ButtonJog5MinUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonJog5MinUp.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonJog5MinUp.Location = New System.Drawing.Point(122, 10)
-        Me.ButtonJog5MinUp.Name = "ButtonJog5MinUp"
-        Me.ButtonJog5MinUp.Size = New System.Drawing.Size(32, 32)
-        Me.ButtonJog5MinUp.TabIndex = 33
-        Me.ButtonJog5MinUp.UseVisualStyleBackColor = False
-        '
-        'ButtonJog1MinDown
-        '
-        Me.ButtonJog1MinDown.BackgroundImage = Global.Timer.My.Resources.Resources.down_white
-        Me.ButtonJog1MinDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonJog1MinDown.Cursor = System.Windows.Forms.Cursors.PanSouth
-        Me.ButtonJog1MinDown.FlatAppearance.BorderSize = 0
-        Me.ButtonJog1MinDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonJog1MinDown.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonJog1MinDown.Location = New System.Drawing.Point(269, 48)
-        Me.ButtonJog1MinDown.Name = "ButtonJog1MinDown"
-        Me.ButtonJog1MinDown.Size = New System.Drawing.Size(32, 32)
-        Me.ButtonJog1MinDown.TabIndex = 35
-        Me.ButtonJog1MinDown.UseVisualStyleBackColor = False
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
@@ -750,20 +624,6 @@ Partial Class Form1
         Me.Label6.Size = New System.Drawing.Size(67, 35)
         Me.Label6.TabIndex = 31
         Me.Label6.Text = "Min"
-        '
-        'ButtonJog5MinDown
-        '
-        Me.ButtonJog5MinDown.BackgroundImage = Global.Timer.My.Resources.Resources.down_white
-        Me.ButtonJog5MinDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonJog5MinDown.Cursor = System.Windows.Forms.Cursors.PanSouth
-        Me.ButtonJog5MinDown.FlatAppearance.BorderSize = 0
-        Me.ButtonJog5MinDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonJog5MinDown.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonJog5MinDown.Location = New System.Drawing.Point(121, 46)
-        Me.ButtonJog5MinDown.Name = "ButtonJog5MinDown"
-        Me.ButtonJog5MinDown.Size = New System.Drawing.Size(32, 32)
-        Me.ButtonJog5MinDown.TabIndex = 30
-        Me.ButtonJog5MinDown.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -806,7 +666,7 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1182, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1182, 30)
         Me.MenuStrip1.TabIndex = 23
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -818,7 +678,7 @@ Partial Class Form1
         Me.SettingsToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.SettingsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(76, 24)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(76, 26)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'BackgroundColorToolStripMenuItem
@@ -895,13 +755,40 @@ Partial Class Form1
         Me.AboutToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AboutToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(64, 26)
         Me.AboutToolStripMenuItem.Text = "About"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Tai Le", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(749, 514)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(376, 43)
+        Me.Label8.TabIndex = 27
+        Me.Label8.Text = "Audiovisual | Produção"
+        '
+        'FontDialogCountdown
+        '
+        Me.FontDialogCountdown.Font = New System.Drawing.Font("Microsoft Sans Serif", 199.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FontDialogCountdown.ShowApply = True
+        '
+        'FontDialogMsg
+        '
+        Me.FontDialogMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 100.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FontDialogMsg.ShowApply = True
+        '
+        'FontDialogClock
+        '
+        Me.FontDialogClock.Font = New System.Drawing.Font("Microsoft Sans Serif", 199.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FontDialogClock.ShowApply = True
         '
         'PictureBox3
         '
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Image = Global.Timer.My.Resources.Resources.logo_hipnose___red
         Me.PictureBox3.Location = New System.Drawing.Point(17, 507)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(370, 50)
@@ -912,13 +799,69 @@ Partial Class Form1
         'PictureBox2
         '
         Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Image = Global.Timer.My.Resources.Resources.logo_hipnose___green
         Me.PictureBox2.Location = New System.Drawing.Point(387, 507)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(370, 50)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 25
         Me.PictureBox2.TabStop = False
+        '
+        'ButtonJog1MinUp
+        '
+        Me.ButtonJog1MinUp.BackgroundImage = Global.Timer.My.Resources.Resources.up_white
+        Me.ButtonJog1MinUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonJog1MinUp.Cursor = System.Windows.Forms.Cursors.PanNorth
+        Me.ButtonJog1MinUp.FlatAppearance.BorderSize = 0
+        Me.ButtonJog1MinUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonJog1MinUp.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonJog1MinUp.Location = New System.Drawing.Point(269, 14)
+        Me.ButtonJog1MinUp.Name = "ButtonJog1MinUp"
+        Me.ButtonJog1MinUp.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonJog1MinUp.TabIndex = 36
+        Me.ButtonJog1MinUp.UseVisualStyleBackColor = False
+        '
+        'ButtonJog5MinUp
+        '
+        Me.ButtonJog5MinUp.BackgroundImage = Global.Timer.My.Resources.Resources.up_white
+        Me.ButtonJog5MinUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonJog5MinUp.Cursor = System.Windows.Forms.Cursors.PanNorth
+        Me.ButtonJog5MinUp.FlatAppearance.BorderSize = 0
+        Me.ButtonJog5MinUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonJog5MinUp.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonJog5MinUp.Location = New System.Drawing.Point(122, 10)
+        Me.ButtonJog5MinUp.Name = "ButtonJog5MinUp"
+        Me.ButtonJog5MinUp.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonJog5MinUp.TabIndex = 33
+        Me.ButtonJog5MinUp.UseVisualStyleBackColor = False
+        '
+        'ButtonJog1MinDown
+        '
+        Me.ButtonJog1MinDown.BackgroundImage = Global.Timer.My.Resources.Resources.down_white
+        Me.ButtonJog1MinDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonJog1MinDown.Cursor = System.Windows.Forms.Cursors.PanSouth
+        Me.ButtonJog1MinDown.FlatAppearance.BorderSize = 0
+        Me.ButtonJog1MinDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonJog1MinDown.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonJog1MinDown.Location = New System.Drawing.Point(269, 48)
+        Me.ButtonJog1MinDown.Name = "ButtonJog1MinDown"
+        Me.ButtonJog1MinDown.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonJog1MinDown.TabIndex = 35
+        Me.ButtonJog1MinDown.UseVisualStyleBackColor = False
+        '
+        'ButtonJog5MinDown
+        '
+        Me.ButtonJog5MinDown.BackgroundImage = Global.Timer.My.Resources.Resources.down_white
+        Me.ButtonJog5MinDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonJog5MinDown.Cursor = System.Windows.Forms.Cursors.PanSouth
+        Me.ButtonJog5MinDown.FlatAppearance.BorderSize = 0
+        Me.ButtonJog5MinDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonJog5MinDown.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonJog5MinDown.Location = New System.Drawing.Point(121, 46)
+        Me.ButtonJog5MinDown.Name = "ButtonJog5MinDown"
+        Me.ButtonJog5MinDown.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonJog5MinDown.TabIndex = 30
+        Me.ButtonJog5MinDown.UseVisualStyleBackColor = False
         '
         'CheckBoxStart
         '
@@ -955,32 +898,89 @@ Partial Class Form1
         Me.ButtonReset.TabStop = False
         Me.ButtonReset.UseVisualStyleBackColor = False
         '
-        'Label8
+        'ButtonHourUp
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Tai Le", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(749, 514)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(376, 43)
-        Me.Label8.TabIndex = 27
-        Me.Label8.Text = "Audiovisual | Produção"
+        Me.ButtonHourUp.BackgroundImage = Global.Timer.My.Resources.Resources.up_white
+        Me.ButtonHourUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonHourUp.Cursor = System.Windows.Forms.Cursors.PanNorth
+        Me.ButtonHourUp.FlatAppearance.BorderSize = 0
+        Me.ButtonHourUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonHourUp.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonHourUp.Location = New System.Drawing.Point(86, 21)
+        Me.ButtonHourUp.Name = "ButtonHourUp"
+        Me.ButtonHourUp.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonHourUp.TabIndex = 32
+        Me.ButtonHourUp.UseVisualStyleBackColor = False
         '
-        'FontDialogCountdown
+        'ButtonMinUp
         '
-        Me.FontDialogCountdown.Font = New System.Drawing.Font("Microsoft Sans Serif", 199.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FontDialogCountdown.ShowApply = True
+        Me.ButtonMinUp.BackgroundImage = Global.Timer.My.Resources.Resources.up_white
+        Me.ButtonMinUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonMinUp.Cursor = System.Windows.Forms.Cursors.PanNorth
+        Me.ButtonMinUp.FlatAppearance.BorderSize = 0
+        Me.ButtonMinUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonMinUp.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonMinUp.Location = New System.Drawing.Point(175, 21)
+        Me.ButtonMinUp.Name = "ButtonMinUp"
+        Me.ButtonMinUp.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonMinUp.TabIndex = 31
+        Me.ButtonMinUp.UseVisualStyleBackColor = False
         '
-        'FontDialogMsg
+        'ButtonSecUp
         '
-        Me.FontDialogMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 100.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FontDialogMsg.ShowApply = True
+        Me.ButtonSecUp.BackgroundImage = Global.Timer.My.Resources.Resources.up_white
+        Me.ButtonSecUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonSecUp.Cursor = System.Windows.Forms.Cursors.PanNorth
+        Me.ButtonSecUp.FlatAppearance.BorderSize = 0
+        Me.ButtonSecUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonSecUp.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonSecUp.Location = New System.Drawing.Point(267, 21)
+        Me.ButtonSecUp.Name = "ButtonSecUp"
+        Me.ButtonSecUp.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonSecUp.TabIndex = 30
+        Me.ButtonSecUp.UseVisualStyleBackColor = False
         '
-        'FontDialogClock
+        'ButtonHourDown
         '
-        Me.FontDialogClock.Font = New System.Drawing.Font("Microsoft Sans Serif", 199.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FontDialogClock.ShowApply = True
+        Me.ButtonHourDown.BackgroundImage = Global.Timer.My.Resources.Resources.down_white
+        Me.ButtonHourDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonHourDown.Cursor = System.Windows.Forms.Cursors.PanSouth
+        Me.ButtonHourDown.FlatAppearance.BorderSize = 0
+        Me.ButtonHourDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonHourDown.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonHourDown.Location = New System.Drawing.Point(85, 105)
+        Me.ButtonHourDown.Name = "ButtonHourDown"
+        Me.ButtonHourDown.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonHourDown.TabIndex = 29
+        Me.ButtonHourDown.UseVisualStyleBackColor = False
+        '
+        'ButtonMinDown
+        '
+        Me.ButtonMinDown.BackgroundImage = Global.Timer.My.Resources.Resources.down_white
+        Me.ButtonMinDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonMinDown.Cursor = System.Windows.Forms.Cursors.PanSouth
+        Me.ButtonMinDown.FlatAppearance.BorderSize = 0
+        Me.ButtonMinDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonMinDown.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonMinDown.Location = New System.Drawing.Point(175, 105)
+        Me.ButtonMinDown.Name = "ButtonMinDown"
+        Me.ButtonMinDown.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonMinDown.TabIndex = 27
+        Me.ButtonMinDown.UseVisualStyleBackColor = False
+        '
+        'ButtonSecDown
+        '
+        Me.ButtonSecDown.BackgroundImage = Global.Timer.My.Resources.Resources.down_white
+        Me.ButtonSecDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonSecDown.Cursor = System.Windows.Forms.Cursors.PanSouth
+        Me.ButtonSecDown.FlatAppearance.BorderSize = 0
+        Me.ButtonSecDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonSecDown.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonSecDown.Location = New System.Drawing.Point(269, 105)
+        Me.ButtonSecDown.Name = "ButtonSecDown"
+        Me.ButtonSecDown.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonSecDown.TabIndex = 19
+        Me.ButtonSecDown.UseVisualStyleBackColor = False
         '
         'Form1
         '
