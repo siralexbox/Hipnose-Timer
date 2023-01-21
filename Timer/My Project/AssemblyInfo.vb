@@ -10,12 +10,12 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Hipnose Timer")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("www.Hipnose.om")> 
-<Assembly: AssemblyProduct("Timer")> 
-<Assembly: AssemblyCopyright("Copyright ©  2023")> 
-<Assembly: AssemblyTrademark("Alex Ramos")> 
+<Assembly: AssemblyCompany("www.Hipnose.om")>
+<Assembly: AssemblyProduct("Hipnose Timer by Alex Ramos")>
+<Assembly: AssemblyCopyright("Copyright ©  2023")>
+<Assembly: AssemblyTrademark("Alex Ramos - alex@videocrew.pt")>
 
-<Assembly: ComVisible(False)> 
+<Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
 <Assembly: Guid("314717a6-987e-4f8e-86e7-37c968db3987")> 

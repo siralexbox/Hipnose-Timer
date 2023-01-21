@@ -27,7 +27,7 @@ Partial Class Form2
         Me.LabelTimer = New System.Windows.Forms.Label()
         Me.LabelClock = New System.Windows.Forms.Label()
         Me.LabelMsg = New System.Windows.Forms.Label()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerMsg = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'LabelTimer
@@ -61,14 +61,14 @@ Partial Class Form2
         Me.LabelMsg.ForeColor = System.Drawing.Color.Red
         Me.LabelMsg.Location = New System.Drawing.Point(204, 160)
         Me.LabelMsg.Name = "LabelMsg"
-        Me.LabelMsg.Size = New System.Drawing.Size(225, 63)
+        Me.LabelMsg.Size = New System.Drawing.Size(218, 62)
         Me.LabelMsg.TabIndex = 3
         Me.LabelMsg.Text = "Message"
         Me.LabelMsg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Timer1
+        'TimerMsg
         '
-        Me.Timer1.Interval = 250
+        Me.TimerMsg.Interval = 250
         '
         'Form2
         '
@@ -91,5 +91,5 @@ Partial Class Form2
     Friend WithEvents LabelTimer As System.Windows.Forms.Label
     Friend WithEvents LabelClock As System.Windows.Forms.Label
     Friend WithEvents LabelMsg As System.Windows.Forms.Label
-    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents TimerMsg As System.Windows.Forms.Timer
 End Class

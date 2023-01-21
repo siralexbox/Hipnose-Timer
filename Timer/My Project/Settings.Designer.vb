@@ -15,7 +15,7 @@ Option Explicit On
 Namespace My
     
     <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "10.0.0.0"),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.4.0.0"),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
     Partial Friend NotInheritable Class MySettings
         Inherits Global.System.Configuration.ApplicationSettingsBase
@@ -29,7 +29,7 @@ Namespace My
     Private Shared addedHandlerLockObject As New Object
 
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)> _
-    Private Shared Sub AutoSaveSettings(ByVal sender As Global.System.Object, ByVal e As Global.System.EventArgs)
+    Private Shared Sub AutoSaveSettings(sender As Global.System.Object, e As Global.System.EventArgs)
         If My.Application.SaveMySettingsOnExit Then
             My.Settings.Save()
         End If
@@ -56,34 +56,78 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property Form2_BackColor() As Global.System.Drawing.Color
+        Public Property Form2_BackColorColor() As Global.System.Drawing.Color
             Get
-                Return CType(Me("Form2_BackColor"),Global.System.Drawing.Color)
+                Return CType(Me("Form2_BackColorColor"),Global.System.Drawing.Color)
             End Get
             Set
-                Me("Form2_BackColor") = value
+                Me("Form2_BackColorColor") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property Form2_LabelTimer() As Global.System.Drawing.Color
+        Public Property Form2_LabelTimerColor() As Global.System.Drawing.Color
             Get
-                Return CType(Me("Form2_LabelTimer"),Global.System.Drawing.Color)
+                Return CType(Me("Form2_LabelTimerColor"),Global.System.Drawing.Color)
             End Get
             Set
-                Me("Form2_LabelTimer") = value
+                Me("Form2_LabelTimerColor") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property Form2_LabelMsg() As Global.System.Drawing.Color
+        Public Property Form2_LabelMsgColor() As Global.System.Drawing.Color
             Get
-                Return CType(Me("Form2_LabelMsg"),Global.System.Drawing.Color)
+                Return CType(Me("Form2_LabelMsgColor"),Global.System.Drawing.Color)
             End Get
             Set
-                Me("Form2_LabelMsg") = value
+                Me("Form2_LabelMsgColor") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property Form2_LabelTimerFont() As Global.System.Drawing.Font
+            Get
+                Return CType(Me("Form2_LabelTimerFont"),Global.System.Drawing.Font)
+            End Get
+            Set
+                Me("Form2_LabelTimerFont") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property Form2_LabelMsgFont() As Global.System.Drawing.Font
+            Get
+                Return CType(Me("Form2_LabelMsgFont"),Global.System.Drawing.Font)
+            End Get
+            Set
+                Me("Form2_LabelMsgFont") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property Form2_LabelClockColor() As Global.System.Drawing.Color
+            Get
+                Return CType(Me("Form2_LabelClockColor"),Global.System.Drawing.Color)
+            End Get
+            Set
+                Me("Form2_LabelClockColor") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property Form2_LabelClockFont() As Global.System.Drawing.Font
+            Get
+                Return CType(Me("Form2_LabelClockFont"),Global.System.Drawing.Font)
+            End Get
+            Set
+                Me("Form2_LabelClockFont") = value
             End Set
         End Property
     End Class

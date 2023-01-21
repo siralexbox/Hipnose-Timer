@@ -40,9 +40,9 @@ Partial Class Form3
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(598, 139)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 17)
+        Me.Label2.Size = New System.Drawing.Size(80, 16)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Version 1.0"
+        Me.Label2.Text = "Version 1.01"
         '
         'Label3
         '
@@ -64,7 +64,7 @@ Partial Class Form3
         Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LinkLabel1.Location = New System.Drawing.Point(423, 298)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(245, 32)
+        Me.LinkLabel1.Size = New System.Drawing.Size(244, 32)
         Me.LinkLabel1.TabIndex = 4
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "www.hipnose.com"
@@ -88,10 +88,10 @@ Partial Class Form3
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(32, 192)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(441, 96)
+        Me.Label4.Size = New System.Drawing.Size(425, 88)
         Me.Label4.TabIndex = 7
-        Me.Label4.Text = "This software is distributed ""as is""," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " with no warranty expressed or implied, " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & _
-            "and no guarantee for accuracy or applicability " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "to any purpose."
+        Me.Label4.Text = "This software is distributed ""as is""," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " with no warranty expressed or implied, " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
+    "and no guarantee for accuracy or applicability " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "to any purpose."
         '
         'Label5
         '

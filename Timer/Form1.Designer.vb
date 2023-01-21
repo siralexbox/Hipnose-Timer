@@ -69,7 +69,7 @@ Partial Class Form1
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel14 = New System.Windows.Forms.Panel()
-        Me.Button1MinUp = New System.Windows.Forms.Button()
+        Me.ButtonJog1MinUp = New System.Windows.Forms.Button()
         Me.ButtonJog5MinUp = New System.Windows.Forms.Button()
         Me.ButtonJog1MinDown = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -82,8 +82,15 @@ Partial Class Form1
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackgroundColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.CountdownColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CoountdownFontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.CurrentTimeColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MessageFontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ClockColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClockFontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColorDialogBackground = New System.Windows.Forms.ColorDialog()
         Me.ColorDialogCountdown = New System.Windows.Forms.ColorDialog()
@@ -93,6 +100,10 @@ Partial Class Form1
         Me.CheckBoxStart = New System.Windows.Forms.CheckBox()
         Me.ButtonReset = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.FontDialogCountdown = New System.Windows.Forms.FontDialog()
+        Me.FontDialogMsg = New System.Windows.Forms.FontDialog()
+        Me.ColorDialogClock = New System.Windows.Forms.ColorDialog()
+        Me.FontDialogClock = New System.Windows.Forms.FontDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel9.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -651,7 +662,7 @@ Partial Class Form1
         'Panel14
         '
         Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel14.Controls.Add(Me.Button1MinUp)
+        Me.Panel14.Controls.Add(Me.ButtonJog1MinUp)
         Me.Panel14.Controls.Add(Me.ButtonJog5MinUp)
         Me.Panel14.Controls.Add(Me.ButtonJog1MinDown)
         Me.Panel14.Controls.Add(Me.Label12)
@@ -665,19 +676,19 @@ Partial Class Form1
         Me.Panel14.Size = New System.Drawing.Size(364, 87)
         Me.Panel14.TabIndex = 21
         '
-        'Button1MinUp
+        'ButtonJog1MinUp
         '
-        Me.Button1MinUp.BackgroundImage = Global.Timer.My.Resources.Resources.up_white
-        Me.Button1MinUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1MinUp.Cursor = System.Windows.Forms.Cursors.PanNorth
-        Me.Button1MinUp.FlatAppearance.BorderSize = 0
-        Me.Button1MinUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1MinUp.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1MinUp.Location = New System.Drawing.Point(269, 14)
-        Me.Button1MinUp.Name = "Button1MinUp"
-        Me.Button1MinUp.Size = New System.Drawing.Size(32, 32)
-        Me.Button1MinUp.TabIndex = 36
-        Me.Button1MinUp.UseVisualStyleBackColor = False
+        Me.ButtonJog1MinUp.BackgroundImage = Global.Timer.My.Resources.Resources.up_white
+        Me.ButtonJog1MinUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonJog1MinUp.Cursor = System.Windows.Forms.Cursors.PanNorth
+        Me.ButtonJog1MinUp.FlatAppearance.BorderSize = 0
+        Me.ButtonJog1MinUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonJog1MinUp.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonJog1MinUp.Location = New System.Drawing.Point(269, 14)
+        Me.ButtonJog1MinUp.Name = "ButtonJog1MinUp"
+        Me.ButtonJog1MinUp.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonJog1MinUp.TabIndex = 36
+        Me.ButtonJog1MinUp.UseVisualStyleBackColor = False
         '
         'ButtonJog5MinUp
         '
@@ -789,7 +800,7 @@ Partial Class Form1
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Control
         Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem, Me.AboutToolStripMenuItem})
@@ -801,10 +812,10 @@ Partial Class Form1
         '
         'SettingsToolStripMenuItem
         '
-        Me.SettingsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.SettingsToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control
         Me.SettingsToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackgroundColorToolStripMenuItem, Me.CountdownColorToolStripMenuItem, Me.CurrentTimeColorToolStripMenuItem})
-        Me.SettingsToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackgroundColorToolStripMenuItem, Me.ToolStripSeparator1, Me.CountdownColorToolStripMenuItem, Me.CoountdownFontToolStripMenuItem, Me.ToolStripSeparator2, Me.CurrentTimeColorToolStripMenuItem, Me.MessageFontToolStripMenuItem, Me.ToolStripSeparator3, Me.ClockColorToolStripMenuItem, Me.ClockFontToolStripMenuItem})
+        Me.SettingsToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.SettingsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
         Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(76, 24)
@@ -812,36 +823,77 @@ Partial Class Form1
         '
         'BackgroundColorToolStripMenuItem
         '
-        Me.BackgroundColorToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BackgroundColorToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.BackgroundColorToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.BackgroundColorToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.BackgroundColorToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.BackgroundColorToolStripMenuItem.Name = "BackgroundColorToolStripMenuItem"
         Me.BackgroundColorToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
         Me.BackgroundColorToolStripMenuItem.Text = "Background color"
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(206, 6)
+        '
         'CountdownColorToolStripMenuItem
         '
-        Me.CountdownColorToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CountdownColorToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.CountdownColorToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.CountdownColorToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.CountdownColorToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.CountdownColorToolStripMenuItem.Name = "CountdownColorToolStripMenuItem"
         Me.CountdownColorToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
         Me.CountdownColorToolStripMenuItem.Text = "Countdown color"
         '
+        'CoountdownFontToolStripMenuItem
+        '
+        Me.CoountdownFontToolStripMenuItem.BackColor = System.Drawing.Color.White
+        Me.CoountdownFontToolStripMenuItem.Name = "CoountdownFontToolStripMenuItem"
+        Me.CoountdownFontToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
+        Me.CoountdownFontToolStripMenuItem.Text = "Countdown Font"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(206, 6)
+        '
         'CurrentTimeColorToolStripMenuItem
         '
-        Me.CurrentTimeColorToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CurrentTimeColorToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.CurrentTimeColorToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.CurrentTimeColorToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.CurrentTimeColorToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.CurrentTimeColorToolStripMenuItem.Name = "CurrentTimeColorToolStripMenuItem"
         Me.CurrentTimeColorToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
         Me.CurrentTimeColorToolStripMenuItem.Text = "Message Color"
+        '
+        'MessageFontToolStripMenuItem
+        '
+        Me.MessageFontToolStripMenuItem.BackColor = System.Drawing.Color.White
+        Me.MessageFontToolStripMenuItem.Name = "MessageFontToolStripMenuItem"
+        Me.MessageFontToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
+        Me.MessageFontToolStripMenuItem.Text = "Message Font"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(206, 6)
+        '
+        'ClockColorToolStripMenuItem
+        '
+        Me.ClockColorToolStripMenuItem.Name = "ClockColorToolStripMenuItem"
+        Me.ClockColorToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
+        Me.ClockColorToolStripMenuItem.Text = "Clock Color"
+        '
+        'ClockFontToolStripMenuItem
+        '
+        Me.ClockFontToolStripMenuItem.Name = "ClockFontToolStripMenuItem"
+        Me.ClockFontToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
+        Me.ClockFontToolStripMenuItem.Text = "Clock Font"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.AboutToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AboutToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.AboutToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
         Me.AboutToolStripMenuItem.Text = "About"
@@ -915,6 +967,21 @@ Partial Class Form1
         Me.Label8.TabIndex = 27
         Me.Label8.Text = "Audiovisual | Produção"
         '
+        'FontDialogCountdown
+        '
+        Me.FontDialogCountdown.Font = New System.Drawing.Font("Microsoft Sans Serif", 200.0!)
+        Me.FontDialogCountdown.MinSize = 200
+        '
+        'FontDialogMsg
+        '
+        Me.FontDialogMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 100.0!)
+        Me.FontDialogMsg.MinSize = 100
+        '
+        'FontDialogClock
+        '
+        Me.FontDialogClock.Font = New System.Drawing.Font("Microsoft Sans Serif", 200.0!)
+        Me.FontDialogClock.MinSize = 200
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -954,7 +1021,7 @@ Partial Class Form1
         Me.MinimumSize = New System.Drawing.Size(1200, 607)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Hipnose Timer v1.0"
+        Me.Text = "Hipnose Timer v1.01"
         Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         Me.Panel9.ResumeLayout(False)
@@ -1035,7 +1102,7 @@ Partial Class Form1
     Friend WithEvents ButtonMinUp As System.Windows.Forms.Button
     Friend WithEvents ButtonSecUp As System.Windows.Forms.Button
     Friend WithEvents ButtonJog5MinUp As System.Windows.Forms.Button
-    Friend WithEvents Button1MinUp As System.Windows.Forms.Button
+    Friend WithEvents ButtonJog1MinUp As System.Windows.Forms.Button
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LabelShowDate As System.Windows.Forms.Label
@@ -1050,5 +1117,15 @@ Partial Class Form1
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
-
+    Friend WithEvents CoountdownFontToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FontDialogCountdown As FontDialog
+    Friend WithEvents FontDialogMsg As FontDialog
+    Friend WithEvents MessageFontToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents ClockColorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClockFontToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ColorDialogClock As ColorDialog
+    Friend WithEvents FontDialogClock As FontDialog
 End Class

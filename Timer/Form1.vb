@@ -5,7 +5,6 @@
     Dim timeUp As String
     Dim digit As String
 
-
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         TimerTimeOfDay.Start()
         Form2.Location = Screen.AllScreens(UBound(Screen.AllScreens)).Bounds.Location
@@ -89,6 +88,7 @@
         If My.Computer.Keyboard.CtrlKeyDown Then
             sender.Text = LabelSetTime.Text
         End If
+        CheckBoxStart.Checked = False
         time = sender.text
         Call TimerStop()
         Call TimerSetText()
@@ -98,6 +98,7 @@
         If My.Computer.Keyboard.CtrlKeyDown Then
             sender.Text = LabelSetTime.Text
         End If
+        CheckBoxStart.Checked = False
         time = sender.text
         Call TimerStop()
         Call TimerSetText()
@@ -107,6 +108,7 @@
         If My.Computer.Keyboard.CtrlKeyDown Then
             sender.Text = LabelSetTime.Text
         End If
+        CheckBoxStart.Checked = False
         time = sender.text
         Call TimerStop()
         Call TimerSetText()
@@ -116,6 +118,7 @@
         If My.Computer.Keyboard.CtrlKeyDown Then
             sender.Text = LabelSetTime.Text
         End If
+        CheckBoxStart.Checked = False
         time = sender.text
         Call TimerStop()
         Call TimerSetText()
@@ -125,6 +128,7 @@
         If My.Computer.Keyboard.CtrlKeyDown Then
             sender.Text = LabelSetTime.Text
         End If
+        CheckBoxStart.Checked = False
         time = sender.text
         Call TimerStop()
         Call TimerSetText()
@@ -134,6 +138,7 @@
         If My.Computer.Keyboard.CtrlKeyDown Then
             sender.Text = LabelSetTime.Text
         End If
+        CheckBoxStart.Checked = False
         time = sender.text
         Call TimerStop()
         Call TimerSetText()
@@ -143,6 +148,7 @@
         If My.Computer.Keyboard.CtrlKeyDown Then
             sender.Text = LabelSetTime.Text
         End If
+        CheckBoxStart.Checked = False
         time = sender.text
         Call TimerStop()
         Call TimerSetText()
@@ -152,6 +158,7 @@
         If My.Computer.Keyboard.CtrlKeyDown Then
             sender.Text = LabelSetTime.Text
         End If
+        CheckBoxStart.Checked = False
         time = sender.text
         Call TimerStop()
         Call TimerSetText()
@@ -161,6 +168,7 @@
         If My.Computer.Keyboard.CtrlKeyDown Then
             sender.Text = LabelSetTime.Text
         End If
+        CheckBoxStart.Checked = False
         time = sender.text
         Call TimerStop()
         Call TimerSetText()
@@ -188,10 +196,8 @@
             sender.forecolor = Color.Red
         Else
             Form2.LabelMsg.Hide()
-            TextBoxMsg.Text = ""
             sender.forecolor = Color.White
             sender.text = "Send Message"
-            TextBoxMsg.Text = ""
         End If
     End Sub
 
@@ -207,22 +213,28 @@
         LabelSetTime.Text = FormatDateTime(DateAdd(DateInterval.Hour, -1, DateTime.Parse(LabelSetTime.Text)), DateFormat.LongTime)
     End Sub
 
+    '-------------------------------------------------------------------------------------------------------------------------------------------
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonJog1MinDown.Click
         LabelCountdown.Text = FormatDateTime(DateAdd(DateInterval.Minute, -1, DateTime.Parse(LabelCountdown.Text)), DateFormat.LongTime)
+        Form2.LabelTimer.Text = LabelCountdown.Text
     End Sub
 
-    Private Sub Button1MinUp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1MinUp.Click
+    Private Sub Button1MinUp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonJog1MinUp.Click
         LabelCountdown.Text = FormatDateTime(DateAdd(DateInterval.Minute, +1, DateTime.Parse(LabelCountdown.Text)), DateFormat.LongTime)
+        Form2.LabelTimer.Text = LabelCountdown.Text
     End Sub
 
     Private Sub ButtonJog5MinUp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonJog5MinUp.Click
         LabelCountdown.Text = FormatDateTime(DateAdd(DateInterval.Minute, +5, DateTime.Parse(LabelCountdown.Text)), DateFormat.LongTime)
+        Form2.LabelTimer.Text = LabelCountdown.Text
     End Sub
 
     Private Sub ButtonJog5MinDown_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonJog5MinDown.Click
         LabelCountdown.Text = FormatDateTime(DateAdd(DateInterval.Minute, -5, DateTime.Parse(LabelCountdown.Text)), DateFormat.LongTime)
+        Form2.LabelTimer.Text = LabelCountdown.Text
     End Sub
 
+    '-------------------------------------------------------------------------------------------------------------------------------------------
     Private Sub ButtonSecUp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonSecUp.Click
         LabelSetTime.Text = FormatDateTime(DateAdd(DateInterval.Second, +1, DateTime.Parse(LabelSetTime.Text)), DateFormat.LongTime)
     End Sub
@@ -235,38 +247,52 @@
         LabelSetTime.Text = FormatDateTime(DateAdd(DateInterval.Hour, +1, DateTime.Parse(LabelSetTime.Text)), DateFormat.LongTime)
     End Sub
 
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutToolStripMenuItem.Click
-        Form3.Show()
-    End Sub
+    '-------------------------------------------------------------------------------------------------------------------------------------------
 
     Private Sub BackgroundColorToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BackgroundColorToolStripMenuItem.Click
-        Me.ColorDialogBackground.ShowDialog()
-        If ColorDialogBackground.ShowDialog = DialogResult.OK Then
+        If ColorDialogBackground.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
             Form2.BackColor = ColorDialogBackground.Color
-            My.Settings.Form2_BackColor = ColorDialogBackground.Color
+            My.Settings.Form2_BackColorColor = ColorDialogBackground.Color
         End If
     End Sub
 
     Private Sub CountdownColorToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CountdownColorToolStripMenuItem.Click
-        Me.ColorDialogCountdown.ShowDialog()
-        If ColorDialogCountdown.ShowDialog = DialogResult.OK Then
+        If ColorDialogCountdown.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
             Form2.LabelTimer.ForeColor = ColorDialogCountdown.Color
-            My.Settings.Form2_LabelTimer = ColorDialogCountdown.Color
+            My.Settings.Form2_LabelTimerColor = ColorDialogCountdown.Color
         End If
-
     End Sub
-
+    Private Sub CoountdownFontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CoountdownFontToolStripMenuItem.Click
+        If FontDialogCountdown.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+            Form2.LabelTimer.Font = FontDialogCountdown.Font
+            My.Settings.Form2_LabelTimerFont = FontDialogCountdown.Font
+        End If
+    End Sub
     Private Sub CurrentTimeColorToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CurrentTimeColorToolStripMenuItem.Click
-        Me.ColorDialogMsg.ShowDialog()
-        If ColorDialogMsg.ShowDialog = DialogResult.OK Then
+        If ColorDialogMsg.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
             Form2.LabelMsg.ForeColor = ColorDialogMsg.Color
-            My.Settings.Form2_LabelMsg = ColorDialogMsg.Color
+            My.Settings.Form2_LabelMsgColor = ColorDialogMsg.Color
         End If
     End Sub
+    Private Sub MessageFontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MessageFontToolStripMenuItem.Click
+        If FontDialogMsg.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+            Form2.LabelMsg.Font = FontDialogMsg.Font
+            My.Settings.Form2_LabelMsgFont = FontDialogMsg.Font
+        End If
+    End Sub
+    Private Sub ClockColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClockColorToolStripMenuItem.Click
+        If ColorDialogClock.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+            Form2.LabelClock.ForeColor = ColorDialogClock.Color
+            My.Settings.Form2_LabelClockColor = ColorDialogClock.Color
+        End If
+    End Sub
+    Private Sub ClockFontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClockFontToolStripMenuItem.Click
+        If FontDialogClock.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
+            Form2.LabelClock.Font = FontDialogClock.Font
+            My.Settings.Form2_LabelClockFont = FontDialogClock.Font
+        End If
+    End Sub
+    '-------------------------------------------------------------------------------------------------------------------------------------------
 
     Private Sub PictureBox3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox3.Click
         Form4.Show()
@@ -275,5 +301,9 @@
     Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox2.Click
         Form4.Show()
     End Sub
+    Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutToolStripMenuItem.Click
+        Form3.Show()
+    End Sub
+
 
 End Class

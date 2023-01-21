@@ -2,13 +2,25 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
   <Profiles />
   <Settings>
-    <Setting Name="Form2_BackColor" Type="System.Drawing.Color" Scope="User">
+    <Setting Name="Form2_BackColorColor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Form2_LabelTimer" Type="System.Drawing.Color" Scope="User">
+    <Setting Name="Form2_LabelTimerColor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Form2_LabelMsg" Type="System.Drawing.Color" Scope="User">
+    <Setting Name="Form2_LabelMsgColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Form2_LabelTimerFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Form2_LabelMsgFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Form2_LabelClockColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Form2_LabelClockFont" Type="System.Drawing.Font" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>
