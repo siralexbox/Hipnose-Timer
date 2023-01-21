@@ -140,7 +140,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.BackColor = System.Drawing.Color.Black
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
@@ -154,7 +154,7 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.BackColor = System.Drawing.Color.Black
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.White
@@ -168,7 +168,7 @@ Partial Class Form1
         '
         'Button6
         '
-        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button6.BackColor = System.Drawing.Color.Black
         Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button6.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.White
@@ -448,7 +448,7 @@ Partial Class Form1
         '
         'Button7
         '
-        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button7.BackColor = System.Drawing.Color.Black
         Me.Button7.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button7.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.White
@@ -462,7 +462,7 @@ Partial Class Form1
         '
         'Button8
         '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button8.BackColor = System.Drawing.Color.Black
         Me.Button8.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button8.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button8.ForeColor = System.Drawing.Color.White
@@ -476,7 +476,7 @@ Partial Class Form1
         '
         'Button9
         '
-        Me.Button9.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button9.BackColor = System.Drawing.Color.Black
         Me.Button9.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button9.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button9.ForeColor = System.Drawing.Color.White
@@ -490,7 +490,7 @@ Partial Class Form1
         '
         'Button10
         '
-        Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button10.BackColor = System.Drawing.Color.Black
         Me.Button10.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button10.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button10.ForeColor = System.Drawing.Color.White
@@ -504,7 +504,7 @@ Partial Class Form1
         '
         'Button11
         '
-        Me.Button11.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button11.BackColor = System.Drawing.Color.Black
         Me.Button11.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button11.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button11.ForeColor = System.Drawing.Color.White
@@ -518,7 +518,7 @@ Partial Class Form1
         '
         'Button12
         '
-        Me.Button12.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button12.BackColor = System.Drawing.Color.Black
         Me.Button12.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button12.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button12.ForeColor = System.Drawing.Color.White
@@ -566,7 +566,7 @@ Partial Class Form1
         'CheckBoxSenMsg
         '
         Me.CheckBoxSenMsg.Appearance = System.Windows.Forms.Appearance.Button
-        Me.CheckBoxSenMsg.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CheckBoxSenMsg.BackColor = System.Drawing.Color.Black
         Me.CheckBoxSenMsg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.CheckBoxSenMsg.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CheckBoxSenMsg.Font = New System.Drawing.Font("Microsoft Tai Le", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -583,7 +583,7 @@ Partial Class Form1
         '
         'ButtonShowTimer
         '
-        Me.ButtonShowTimer.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ButtonShowTimer.BackColor = System.Drawing.Color.Black
         Me.ButtonShowTimer.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonShowTimer.Font = New System.Drawing.Font("Microsoft Tai Le", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonShowTimer.ForeColor = System.Drawing.Color.Red
@@ -597,7 +597,7 @@ Partial Class Form1
         '
         'ButtonShowClock
         '
-        Me.ButtonShowClock.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ButtonShowClock.BackColor = System.Drawing.Color.Black
         Me.ButtonShowClock.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonShowClock.Font = New System.Drawing.Font("Microsoft Tai Le", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonShowClock.ForeColor = System.Drawing.Color.White
@@ -623,7 +623,7 @@ Partial Class Form1
         '
         'TextBoxMsg
         '
-        Me.TextBoxMsg.BackColor = System.Drawing.Color.Gray
+        Me.TextBoxMsg.BackColor = System.Drawing.Color.Black
         Me.TextBoxMsg.Cursor = System.Windows.Forms.Cursors.Default
         Me.TextBoxMsg.Font = New System.Drawing.Font("Microsoft Tai Le", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxMsg.ForeColor = System.Drawing.Color.White
@@ -982,7 +982,7 @@ Partial Class Form1
         'CheckBoxStart
         '
         Me.CheckBoxStart.Appearance = System.Windows.Forms.Appearance.Button
-        Me.CheckBoxStart.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CheckBoxStart.BackColor = System.Drawing.Color.Black
         Me.CheckBoxStart.BackgroundImage = Global.Timer.My.Resources.Resources.play_button_green_2
         Me.CheckBoxStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.CheckBoxStart.Cursor = System.Windows.Forms.Cursors.Hand
@@ -999,7 +999,7 @@ Partial Class Form1
         '
         'ButtonReset
         '
-        Me.ButtonReset.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ButtonReset.BackColor = System.Drawing.Color.Black
         Me.ButtonReset.BackgroundImage = Global.Timer.My.Resources.Resources.reset_button_green
         Me.ButtonReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ButtonReset.Cursor = System.Windows.Forms.Cursors.Hand
@@ -1054,7 +1054,7 @@ Partial Class Form1
         Me.MinimumSize = New System.Drawing.Size(1200, 607)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Hipnose Timer v1.01 Donationware"
+        Me.Text = "Hipnose Timer v1.011 Donationware"
         Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         Me.Panel9.ResumeLayout(False)
