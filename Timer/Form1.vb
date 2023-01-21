@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
+Public Class Form1
 
     Dim time As String
     Dim timeDown As String
@@ -255,7 +257,6 @@
             My.Settings.Form2_BackColorColor = ColorDialogBackground.Color
         End If
     End Sub
-
     Private Sub CountdownColorToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CountdownColorToolStripMenuItem.Click
         If ColorDialogCountdown.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
             Form2.LabelTimer.ForeColor = ColorDialogCountdown.Color
@@ -267,6 +268,9 @@
             Form2.LabelTimer.Font = FontDialogCountdown.Font
             My.Settings.Form2_LabelTimerFont = FontDialogCountdown.Font
         End If
+    End Sub
+    Private Sub FontDialogCountdownApply(sender As Object, e As EventArgs) Handles FontDialogCountdown.Apply
+        Form2.LabelTimer.Font = FontDialogCountdown.Font
     End Sub
     Private Sub CurrentTimeColorToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CurrentTimeColorToolStripMenuItem.Click
         If ColorDialogMsg.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
@@ -280,6 +284,9 @@
             My.Settings.Form2_LabelMsgFont = FontDialogMsg.Font
         End If
     End Sub
+    Private Sub FontDialogMsgApply(sender As Object, e As EventArgs) Handles FontDialogMsg.Apply
+        Form2.LabelMsg.Font = FontDialogMsg.Font
+    End Sub
     Private Sub ClockColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClockColorToolStripMenuItem.Click
         If ColorDialogClock.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
             Form2.LabelClock.ForeColor = ColorDialogClock.Color
@@ -292,6 +299,10 @@
             My.Settings.Form2_LabelClockFont = FontDialogClock.Font
         End If
     End Sub
+    Private Sub FontDialogClockApply(sender As Object, e As EventArgs) Handles FontDialogClock.Apply
+        Form2.LabelClock.Font = FontDialogClock.Font
+    End Sub
+
     '-------------------------------------------------------------------------------------------------------------------------------------------
 
     Private Sub PictureBox3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox3.Click

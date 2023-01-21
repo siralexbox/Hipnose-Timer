@@ -969,18 +969,18 @@ Partial Class Form1
         '
         'FontDialogCountdown
         '
-        Me.FontDialogCountdown.Font = New System.Drawing.Font("Microsoft Sans Serif", 200.0!)
-        Me.FontDialogCountdown.MinSize = 200
+        Me.FontDialogCountdown.Font = New System.Drawing.Font("Microsoft Sans Serif", 199.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FontDialogCountdown.ShowApply = True
         '
         'FontDialogMsg
         '
-        Me.FontDialogMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 100.0!)
-        Me.FontDialogMsg.MinSize = 100
+        Me.FontDialogMsg.Font = New System.Drawing.Font("Microsoft Sans Serif", 100.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FontDialogMsg.ShowApply = True
         '
         'FontDialogClock
         '
-        Me.FontDialogClock.Font = New System.Drawing.Font("Microsoft Sans Serif", 200.0!)
-        Me.FontDialogClock.MinSize = 200
+        Me.FontDialogClock.Font = New System.Drawing.Font("Microsoft Sans Serif", 199.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FontDialogClock.ShowApply = True
         '
         'Form1
         '
