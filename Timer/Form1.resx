@@ -154,7 +154,7 @@
   <data name="PictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAASwAAAAyCAYAAADm1uYqAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAHwpJREFUeF7tnQmYHFW1xwMquIIoIYSsZGbSPUnYEUKEBEKYDLMkAiJPxR35kPdQ
+        vAAADrwBlbxySQAAHwpJREFUeF7tnQmYHFW1xwMquIIoIYSsZGbSPUnYEUKEBEKYDLMkAiJPxR35kPdQ
         eII8NgOCCgiKbEF47JsQEsBEtkAIYUkgmcxkYV8DKLgrIjEkQ/n/3TrV00tVdXXPlhn6/33nq657zr3V
         U939n3POPffWgPfee+/uIjJiQDdC4w+TzJPcY9fLlvmSc8y0ggr6FPTdnSq5XvKkpEVynmSsqSsoB14R
         6AaPM9NugcavtUuFQvqHzbSCCvoE9J09VvKq5A+SRySzJHe0t7ev1vFvksck+5l5n8HKHRq3enrs9KlP
@@ -289,6 +289,12 @@
         X7IJKV/ybd9fECfxpOTzJeeFCI8+P9xMK6iggu5DPhFFSRdgwID/AMhyTKFV+U3UAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="BackgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>723, 43</value>
+  </metadata>
+  <metadata name="TimerCountNegative.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>919, 43</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIABFTQAAZgAAAICAAAABACAAKAgBAKtNAABAQAAAAQAgAChCAADTVQEAMDAAAAEA

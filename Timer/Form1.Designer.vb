@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
@@ -43,6 +43,7 @@ Partial Class Form1
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.CheckBoxGoNegative = New System.Windows.Forms.CheckBox()
         Me.LabelPastTime = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -69,6 +70,10 @@ Partial Class Form1
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.ButtonJog1SecUp = New System.Windows.Forms.Button()
+        Me.ButtonJog1SecDown = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.ButtonJog1MinUp = New System.Windows.Forms.Button()
         Me.ButtonJog5MinUp = New System.Windows.Forms.Button()
         Me.ButtonJog1MinDown = New System.Windows.Forms.Button()
@@ -103,6 +108,8 @@ Partial Class Form1
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.CheckBoxStart = New System.Windows.Forms.CheckBox()
         Me.ButtonReset = New System.Windows.Forms.Button()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.TimerCountNegative = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel9.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -360,6 +367,7 @@ Partial Class Form1
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel8.BackgroundImage = Global.Timer.My.Resources.Resources.back_hipnose
+        Me.Panel8.Controls.Add(Me.CheckBoxGoNegative)
         Me.Panel8.Controls.Add(Me.LabelPastTime)
         Me.Panel8.Controls.Add(Me.LabelCountdown)
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Fill
@@ -368,6 +376,18 @@ Partial Class Form1
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(364, 164)
         Me.Panel8.TabIndex = 18
+        '
+        'CheckBoxGoNegative
+        '
+        Me.CheckBoxGoNegative.AutoSize = True
+        Me.CheckBoxGoNegative.BackColor = System.Drawing.Color.Transparent
+        Me.CheckBoxGoNegative.ForeColor = System.Drawing.Color.White
+        Me.CheckBoxGoNegative.Location = New System.Drawing.Point(269, 130)
+        Me.CheckBoxGoNegative.Name = "CheckBoxGoNegative"
+        Me.CheckBoxGoNegative.Size = New System.Drawing.Size(84, 20)
+        Me.CheckBoxGoNegative.TabIndex = 19
+        Me.CheckBoxGoNegative.Text = "Negative"
+        Me.CheckBoxGoNegative.UseVisualStyleBackColor = False
         '
         'LabelPastTime
         '
@@ -413,7 +433,7 @@ Partial Class Form1
         Me.LabelShowDate.BackColor = System.Drawing.Color.Transparent
         Me.LabelShowDate.Font = New System.Drawing.Font("Microsoft Tai Le", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelShowDate.ForeColor = System.Drawing.Color.White
-        Me.LabelShowDate.Location = New System.Drawing.Point(85, 123)
+        Me.LabelShowDate.Location = New System.Drawing.Point(85, 12)
         Me.LabelShowDate.Name = "LabelShowDate"
         Me.LabelShowDate.Size = New System.Drawing.Size(111, 26)
         Me.LabelShowDate.TabIndex = 2
@@ -681,6 +701,10 @@ Partial Class Form1
         '
         Me.Panel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel14.BackgroundImage = Global.Timer.My.Resources.Resources.back_hipnose
+        Me.Panel14.Controls.Add(Me.ButtonJog1SecUp)
+        Me.Panel14.Controls.Add(Me.ButtonJog1SecDown)
+        Me.Panel14.Controls.Add(Me.Label10)
+        Me.Panel14.Controls.Add(Me.Label14)
         Me.Panel14.Controls.Add(Me.ButtonJog1MinUp)
         Me.Panel14.Controls.Add(Me.ButtonJog5MinUp)
         Me.Panel14.Controls.Add(Me.ButtonJog1MinDown)
@@ -695,6 +719,60 @@ Partial Class Form1
         Me.Panel14.Size = New System.Drawing.Size(364, 87)
         Me.Panel14.TabIndex = 21
         '
+        'ButtonJog1SecUp
+        '
+        Me.ButtonJog1SecUp.BackColor = System.Drawing.Color.Transparent
+        Me.ButtonJog1SecUp.BackgroundImage = Global.Timer.My.Resources.Resources.up_white
+        Me.ButtonJog1SecUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonJog1SecUp.Cursor = System.Windows.Forms.Cursors.PanNorth
+        Me.ButtonJog1SecUp.FlatAppearance.BorderSize = 0
+        Me.ButtonJog1SecUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonJog1SecUp.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonJog1SecUp.Location = New System.Drawing.Point(321, 11)
+        Me.ButtonJog1SecUp.Name = "ButtonJog1SecUp"
+        Me.ButtonJog1SecUp.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonJog1SecUp.TabIndex = 40
+        Me.ButtonJog1SecUp.UseVisualStyleBackColor = False
+        '
+        'ButtonJog1SecDown
+        '
+        Me.ButtonJog1SecDown.BackColor = System.Drawing.Color.Transparent
+        Me.ButtonJog1SecDown.BackgroundImage = Global.Timer.My.Resources.Resources.down_white
+        Me.ButtonJog1SecDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonJog1SecDown.Cursor = System.Windows.Forms.Cursors.PanSouth
+        Me.ButtonJog1SecDown.FlatAppearance.BorderSize = 0
+        Me.ButtonJog1SecDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonJog1SecDown.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonJog1SecDown.Location = New System.Drawing.Point(321, 45)
+        Me.ButtonJog1SecDown.Name = "ButtonJog1SecDown"
+        Me.ButtonJog1SecDown.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonJog1SecDown.TabIndex = 39
+        Me.ButtonJog1SecDown.UseVisualStyleBackColor = False
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Tai Le", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(250, 42)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(59, 35)
+        Me.Label10.TabIndex = 38
+        Me.Label10.Text = "Sec"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Tai Le", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.White
+        Me.Label14.Location = New System.Drawing.Point(286, 11)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(31, 35)
+        Me.Label14.TabIndex = 37
+        Me.Label14.Text = "1"
+        '
         'ButtonJog1MinUp
         '
         Me.ButtonJog1MinUp.BackColor = System.Drawing.Color.Transparent
@@ -704,7 +782,7 @@ Partial Class Form1
         Me.ButtonJog1MinUp.FlatAppearance.BorderSize = 0
         Me.ButtonJog1MinUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonJog1MinUp.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonJog1MinUp.Location = New System.Drawing.Point(269, 14)
+        Me.ButtonJog1MinUp.Location = New System.Drawing.Point(205, 13)
         Me.ButtonJog1MinUp.Name = "ButtonJog1MinUp"
         Me.ButtonJog1MinUp.Size = New System.Drawing.Size(32, 32)
         Me.ButtonJog1MinUp.TabIndex = 36
@@ -719,7 +797,7 @@ Partial Class Form1
         Me.ButtonJog5MinUp.FlatAppearance.BorderSize = 0
         Me.ButtonJog5MinUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonJog5MinUp.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonJog5MinUp.Location = New System.Drawing.Point(122, 10)
+        Me.ButtonJog5MinUp.Location = New System.Drawing.Point(87, 10)
         Me.ButtonJog5MinUp.Name = "ButtonJog5MinUp"
         Me.ButtonJog5MinUp.Size = New System.Drawing.Size(32, 32)
         Me.ButtonJog5MinUp.TabIndex = 33
@@ -734,7 +812,7 @@ Partial Class Form1
         Me.ButtonJog1MinDown.FlatAppearance.BorderSize = 0
         Me.ButtonJog1MinDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonJog1MinDown.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonJog1MinDown.Location = New System.Drawing.Point(269, 48)
+        Me.ButtonJog1MinDown.Location = New System.Drawing.Point(205, 47)
         Me.ButtonJog1MinDown.Name = "ButtonJog1MinDown"
         Me.ButtonJog1MinDown.Size = New System.Drawing.Size(32, 32)
         Me.ButtonJog1MinDown.TabIndex = 35
@@ -746,7 +824,7 @@ Partial Class Form1
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft Tai Le", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(198, 45)
+        Me.Label12.Location = New System.Drawing.Point(134, 44)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(67, 35)
         Me.Label12.TabIndex = 33
@@ -758,7 +836,7 @@ Partial Class Form1
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Tai Le", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(234, 14)
+        Me.Label1.Location = New System.Drawing.Point(170, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(31, 35)
         Me.Label1.TabIndex = 32
@@ -770,7 +848,7 @@ Partial Class Form1
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft Tai Le", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(51, 45)
+        Me.Label6.Location = New System.Drawing.Point(16, 45)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(67, 35)
         Me.Label6.TabIndex = 31
@@ -785,7 +863,7 @@ Partial Class Form1
         Me.ButtonJog5MinDown.FlatAppearance.BorderSize = 0
         Me.ButtonJog5MinDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonJog5MinDown.Font = New System.Drawing.Font("Microsoft Tai Le", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonJog5MinDown.Location = New System.Drawing.Point(121, 46)
+        Me.ButtonJog5MinDown.Location = New System.Drawing.Point(86, 46)
         Me.ButtonJog5MinDown.Name = "ButtonJog5MinDown"
         Me.ButtonJog5MinDown.Size = New System.Drawing.Size(32, 32)
         Me.ButtonJog5MinDown.TabIndex = 30
@@ -797,7 +875,7 @@ Partial Class Form1
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Tai Le", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(83, 14)
+        Me.Label2.Location = New System.Drawing.Point(48, 14)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(31, 35)
         Me.Label2.TabIndex = 5
@@ -958,7 +1036,7 @@ Partial Class Form1
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(240, 507)
+        Me.PictureBox3.Location = New System.Drawing.Point(240, 502)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(370, 50)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -999,6 +1077,10 @@ Partial Class Form1
         Me.ButtonReset.TabIndex = 5
         Me.ButtonReset.TabStop = False
         Me.ButtonReset.UseVisualStyleBackColor = False
+        '
+        'TimerCountNegative
+        '
+        Me.TimerCountNegative.Interval = 1000
         '
         'Form1
         '
@@ -1144,4 +1226,11 @@ Partial Class Form1
     Friend WithEvents ClockFontToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ColorDialogClock As ColorDialog
     Friend WithEvents FontDialogClock As FontDialog
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ButtonJog1SecUp As Button
+    Friend WithEvents ButtonJog1SecDown As Button
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents CheckBoxGoNegative As CheckBox
+    Friend WithEvents TimerCountNegative As Windows.Forms.Timer
 End Class

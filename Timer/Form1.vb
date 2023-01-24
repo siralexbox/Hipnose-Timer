@@ -1,4 +1,9 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.Runtime.CompilerServices
+'Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
+Imports System.Net.Sockets
+Imports System.Text
+Imports System.Net
 
 Public Class Form1
 
@@ -11,7 +16,29 @@ Public Class Form1
         TimerTimeOfDay.Start()
         Form2.Location = Screen.AllScreens(UBound(Screen.AllScreens)).Bounds.Location
         Form2.Show()
+        Control.CheckForIllegalCrossThreadCalls = False
+        multi_server()
     End Sub
+    Private Sub multi_server()
+        Dim thread As System.Threading.Thread
+        thread = New System.Threading.Thread(AddressOf Hosting_Port)
+        thread.Start()
+    End Sub
+    Private Sub Hosting_Port()
+        Dim TcpListener As New TcpListener(IPAddress.Parse("127.0.0.1"), 1234)
+        TcpListener.Start()
+        Try
+            Dim tcpClient As TcpClient = TcpListener.AcceptTcpClient()
+            Dim networkStream As NetworkStream = tcpClient.GetStream()
+
+            Dim bytes(tcpClient.ReceiveBufferSize) As Byte
+            networkStream.Read(bytes, 0, CInt(tcpClient.ReceiveBufferSize))
+            Dim clientdata As String = Encoding.ASCII.GetString(bytes)
+            Me.LabelCountdown.Text = clientdata
+        Catch ex As Exception
+        End Try
+    End Sub
+
     Private Sub Form1_FormClosed(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.FormClosed
         My.Settings.Save()
     End Sub
@@ -22,13 +49,29 @@ Public Class Form1
             timeDown = FormatDateTime(DateAdd(DateInterval.Second, -1, DateTime.Parse(LabelCountdown.Text)), DateFormat.LongTime)
             Me.LabelCountdown.Text = timeDown
             Form2.LabelTimer.Text = timeDown
-            If timeDown = "00:00:00" Or timeDown = "23:59:59" Then
-                Me.LabelCountdown.Text = "00:00:00"
-                Me.LabelPastTime.Text = "00:00:00"
-                Form2.LabelTimer.Text = "00:00:00"
-                TimerCountdown.Stop()
-                TimerCountUp.Stop()
-                CheckBoxStart.Checked = False
+            If LabelCountdown.Text = "00:03:00" Then
+                LabelCountdown.ForeColor = Color.Orange
+                Form2.LabelTimer.ForeColor = Color.Orange
+            ElseIf LabelCountdown.Text = "00:01:00" Then
+                LabelCountdown.ForeColor = Color.Red
+                Form2.LabelTimer.ForeColor = Color.Red
+            End If
+            If CheckBoxGoNegative.Checked = False Then
+                If timeDown = "00:00:00" Or timeDown = "23:59:59" Then
+                    Me.LabelCountdown.Text = "00:00:00"
+                    Me.LabelPastTime.Text = "00:00:00"
+                    Form2.LabelTimer.Text = "00:00:00"
+                    TimerCountdown.Stop()
+                    TimerCountUp.Stop()
+                    CheckBoxStart.Checked = False
+                End If
+            ElseIf CheckBoxGoNegative.Checked = True Then
+                If timeDown = "00:00:00" Then
+                    TimerCountdown.Stop()
+                    TimerCountUp.Stop()
+                    TimerCountNegative.Start()
+
+                End If
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -53,15 +96,13 @@ Public Class Form1
     End Sub
 
     Private Sub CheckBoxStart_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBoxStart.CheckedChanged
-        If sender.Checked = True Then
+        If sender.Checked = True And LabelCountdown.Text <> "00:00:00" Then
             TimerCountdown.Start()
             TimerCountUp.Start()
-            sender.BackgroundImageLayout = ImageLayout.Stretch
             sender.BackgroundImage = My.Resources.pause_button_green_2
         Else
             TimerCountdown.Stop()
             TimerCountUp.Stop()
-            sender.BackgroundImageLayout = ImageLayout.Zoom
             sender.backgroundimage = My.Resources.play_button_green_2
         End If
     End Sub
@@ -80,7 +121,10 @@ Public Class Form1
     Private Sub ButtonReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonReset.Click
         TimerCountdown.Stop()
         TimerCountUp.Stop()
+        TimerCountNegative.Stop()
         CheckBoxStart.Checked = False
+        LabelCountdown.ForeColor = Color.Green
+        Form2.LabelTimer.ForeColor = Color.Green
         LabelCountdown.Text = "00:00:00"
         LabelPastTime.Text = "00:00:00"
         Form2.LabelTimer.Text = "00:00:00"
@@ -235,7 +279,15 @@ Public Class Form1
         LabelCountdown.Text = FormatDateTime(DateAdd(DateInterval.Minute, -5, DateTime.Parse(LabelCountdown.Text)), DateFormat.LongTime)
         Form2.LabelTimer.Text = LabelCountdown.Text
     End Sub
+    Private Sub ButtonJog1SecUp_Click(sender As Object, e As EventArgs) Handles ButtonJog1SecUp.Click
+        LabelCountdown.Text = FormatDateTime(DateAdd(DateInterval.Second, +1, DateTime.Parse(LabelCountdown.Text)), DateFormat.LongTime)
+        Form2.LabelTimer.Text = LabelCountdown.Text
+    End Sub
 
+    Private Sub ButtonJog1SecDown_Click(sender As Object, e As EventArgs) Handles ButtonJog1SecDown.Click
+        LabelCountdown.Text = FormatDateTime(DateAdd(DateInterval.Second, -1, DateTime.Parse(LabelCountdown.Text)), DateFormat.LongTime)
+        Form2.LabelTimer.Text = LabelCountdown.Text
+    End Sub
     '-------------------------------------------------------------------------------------------------------------------------------------------
     Private Sub ButtonSecUp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonSecUp.Click
         LabelSetTime.Text = FormatDateTime(DateAdd(DateInterval.Second, +1, DateTime.Parse(LabelSetTime.Text)), DateFormat.LongTime)
@@ -309,11 +361,33 @@ Public Class Form1
         Form4.Show()
     End Sub
 
-    Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+    Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Form4.Show()
     End Sub
     Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutToolStripMenuItem.Click
         Form3.Show()
     End Sub
 
+    Private Sub TimerCountNegative_Tick(sender As Object, e As EventArgs) Handles TimerCountNegative.Tick
+        TimerCountdown.Interval = 1000
+        Try
+            timeDown = FormatDateTime(DateAdd(DateInterval.Second, +1, DateTime.Parse(LabelCountdown.Text)), DateFormat.LongTime)
+            Me.LabelCountdown.Text = timeDown
+            Form2.LabelTimer.Text = timeDown
+            Me.LabelCountdown.ForeColor = Color.Red
+            Form2.LabelTimer.ForeColor = Color.Red
+            CheckBoxStart.Checked = True
+            CheckBoxStart.Enabled = False
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub CheckBoxGoNegative_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxGoNegative.CheckedChanged
+        If sender.Checked = True Then
+            sender.ForeColor = Color.Red
+        Else
+            sender.ForeColor = Color.White
+        End If
+    End Sub
 End Class
