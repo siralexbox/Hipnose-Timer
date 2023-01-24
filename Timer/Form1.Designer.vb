@@ -101,7 +101,6 @@ Partial Class Form1
         Me.ColorDialogClock = New System.Windows.Forms.ColorDialog()
         Me.FontDialogClock = New System.Windows.Forms.FontDialog()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.CheckBoxStart = New System.Windows.Forms.CheckBox()
         Me.ButtonReset = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
@@ -118,7 +117,6 @@ Partial Class Form1
         Me.Panel12.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TimerCountdown
@@ -934,7 +932,7 @@ Partial Class Form1
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Microsoft Tai Le", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(749, 514)
+        Me.Label8.Location = New System.Drawing.Point(604, 514)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(376, 43)
         Me.Label8.TabIndex = 27
@@ -960,24 +958,12 @@ Partial Class Form1
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(17, 507)
+        Me.PictureBox3.Location = New System.Drawing.Point(240, 507)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(370, 50)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 26
         Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(387, 507)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(370, 50)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 25
-        Me.PictureBox2.TabStop = False
         '
         'CheckBoxStart
         '
@@ -1023,7 +1009,6 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(1182, 560)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Panel12)
         Me.Controls.Add(Me.Label7)
@@ -1076,7 +1061,6 @@ Partial Class Form1
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1147,7 +1131,6 @@ Partial Class Form1
     Friend WithEvents ColorDialogCountdown As System.Windows.Forms.ColorDialog
     Friend WithEvents ColorDialogMsg As System.Windows.Forms.ColorDialog
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents CoountdownFontToolStripMenuItem As ToolStripMenuItem

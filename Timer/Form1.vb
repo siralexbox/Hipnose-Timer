@@ -309,7 +309,7 @@ Public Class Form1
         Form4.Show()
     End Sub
 
-    Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox2.Click
+    Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
         Form4.Show()
     End Sub
     Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutToolStripMenuItem.Click
