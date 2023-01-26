@@ -426,11 +426,11 @@ Partial Class Form1
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Microsoft Tai Le", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.White
-        Me.Label15.Location = New System.Drawing.Point(85, 127)
+        Me.Label15.Location = New System.Drawing.Point(62, 124)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(109, 26)
+        Me.Label15.Size = New System.Drawing.Size(129, 26)
         Me.Label15.TabIndex = 4
-        Me.Label15.Text = "Show end:"
+        Me.Label15.Text = "Show end at"
         '
         'LabelShowEnd
         '
@@ -438,7 +438,7 @@ Partial Class Form1
         Me.LabelShowEnd.BackColor = System.Drawing.Color.Transparent
         Me.LabelShowEnd.Font = New System.Drawing.Font("Microsoft Tai Le", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelShowEnd.ForeColor = System.Drawing.Color.White
-        Me.LabelShowEnd.Location = New System.Drawing.Point(200, 127)
+        Me.LabelShowEnd.Location = New System.Drawing.Point(200, 124)
         Me.LabelShowEnd.Name = "LabelShowEnd"
         Me.LabelShowEnd.Size = New System.Drawing.Size(65, 26)
         Me.LabelShowEnd.TabIndex = 3
@@ -950,14 +950,14 @@ Partial Class Form1
         Me.BackgroundColorToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.BackgroundColorToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.BackgroundColorToolStripMenuItem.Name = "BackgroundColorToolStripMenuItem"
-        Me.BackgroundColorToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.BackgroundColorToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
         Me.BackgroundColorToolStripMenuItem.Text = "Background color"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.BackColor = System.Drawing.Color.White
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(221, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(206, 6)
         '
         'CountdownColorToolStripMenuItem
         '
@@ -965,14 +965,14 @@ Partial Class Form1
         Me.CountdownColorToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.CountdownColorToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.CountdownColorToolStripMenuItem.Name = "CountdownColorToolStripMenuItem"
-        Me.CountdownColorToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CountdownColorToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
         Me.CountdownColorToolStripMenuItem.Text = "Countdown color"
         '
         'CoountdownFontToolStripMenuItem
         '
         Me.CoountdownFontToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.CoountdownFontToolStripMenuItem.Name = "CoountdownFontToolStripMenuItem"
-        Me.CoountdownFontToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CoountdownFontToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
         Me.CoountdownFontToolStripMenuItem.Text = "Countdown Font"
         '
         'GoBelow0ToolStripMenuItem
@@ -981,7 +981,7 @@ Partial Class Form1
         Me.GoBelow0ToolStripMenuItem.CheckOnClick = True
         Me.GoBelow0ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.GoBelow0ToolStripMenuItem.Name = "GoBelow0ToolStripMenuItem"
-        Me.GoBelow0ToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.GoBelow0ToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
         Me.GoBelow0ToolStripMenuItem.Text = "Go below 0"
         '
         'ChangeColorsToolStripMenuItem
@@ -990,14 +990,14 @@ Partial Class Form1
         Me.ChangeColorsToolStripMenuItem.CheckOnClick = True
         Me.ChangeColorsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ChangeColorsToolStripMenuItem.Name = "ChangeColorsToolStripMenuItem"
-        Me.ChangeColorsToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ChangeColorsToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
         Me.ChangeColorsToolStripMenuItem.Text = "Change colors "
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.BackColor = System.Drawing.Color.White
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(221, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(206, 6)
         '
         'CurrentTimeColorToolStripMenuItem
         '
@@ -1005,41 +1005,41 @@ Partial Class Form1
         Me.CurrentTimeColorToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.CurrentTimeColorToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.CurrentTimeColorToolStripMenuItem.Name = "CurrentTimeColorToolStripMenuItem"
-        Me.CurrentTimeColorToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CurrentTimeColorToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
         Me.CurrentTimeColorToolStripMenuItem.Text = "Message Color"
         '
         'MessageFontToolStripMenuItem
         '
         Me.MessageFontToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.MessageFontToolStripMenuItem.Name = "MessageFontToolStripMenuItem"
-        Me.MessageFontToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.MessageFontToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
         Me.MessageFontToolStripMenuItem.Text = "Message Font"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.BackColor = System.Drawing.Color.White
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(221, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(206, 6)
         '
         'ClockColorToolStripMenuItem
         '
         Me.ClockColorToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.ClockColorToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.ClockColorToolStripMenuItem.Name = "ClockColorToolStripMenuItem"
-        Me.ClockColorToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ClockColorToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
         Me.ClockColorToolStripMenuItem.Text = "Clock Color"
         '
         'ClockFontToolStripMenuItem
         '
         Me.ClockFontToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.ClockFontToolStripMenuItem.Name = "ClockFontToolStripMenuItem"
-        Me.ClockFontToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ClockFontToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
         Me.ClockFontToolStripMenuItem.Text = "Clock Font"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(221, 6)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(206, 6)
         '
         'AboutToolStripMenuItem
         '
@@ -1167,7 +1167,7 @@ Partial Class Form1
         Me.MinimumSize = New System.Drawing.Size(1200, 607)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Hipnose Timer v1.011 Donationware"
+        Me.Text = "Hipnose Timer v1.2"
         Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         Me.Panel9.ResumeLayout(False)
