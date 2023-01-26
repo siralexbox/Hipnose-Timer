@@ -1,11 +1,8 @@
 ﻿
-Imports System.Net.Sockets
 Imports System.Text
-Imports System.Net
 Imports System.ComponentModel
 
 Public Class Form1
-
     Dim time As String
     Dim timeDown As String
     Dim timeUp As String
@@ -15,27 +12,6 @@ Public Class Form1
         TimerTimeOfDay.Start()
         Form2.Location = Screen.AllScreens(UBound(Screen.AllScreens)).Bounds.Location
         Form2.Show()
-        Control.CheckForIllegalCrossThreadCalls = False
-        multi_server()
-    End Sub
-    Private Sub multi_server()
-        Dim thread As System.Threading.Thread
-        thread = New System.Threading.Thread(AddressOf Hosting_Port)
-        thread.Start()
-    End Sub
-    Private Sub Hosting_Port()
-        Dim TcpListener As New TcpListener(IPAddress.Parse("127.0.0.1"), 1234)
-        TcpListener.Start()
-        Try
-            Dim tcpClient As TcpClient = TcpListener.AcceptTcpClient()
-            Dim networkStream As NetworkStream = tcpClient.GetStream()
-
-            Dim bytes(tcpClient.ReceiveBufferSize) As Byte
-            networkStream.Read(bytes, 0, CInt(tcpClient.ReceiveBufferSize))
-            Dim clientdata As String = Encoding.ASCII.GetString(bytes)
-            Me.LabelCountdown.Text = clientdata
-        Catch ex As Exception
-        End Try
     End Sub
 
     Private Sub Form1_FormClosed(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.FormClosed
